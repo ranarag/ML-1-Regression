@@ -34,14 +34,9 @@ def grad_squared_err(data, weights, lr):
     X_dimension = len(data[0][0])
     grad_arr  = [0.] * X_dimension
     n = len(data)
-    # print n 
     for (X, y) in data:
-        diff = (phi(X, weights) - y)
-        # print y
-        # print phi(X, weights)
-        # exit()
         for i, x in enumerate(X):
-            grad_arr[i] += diff * x
+            grad_arr[i] += (phi(X, weights) - y) * x
     for i in range(X_dimension):
         grad_arr[i] /= n
     return grad_arr

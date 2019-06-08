@@ -25,10 +25,7 @@ def calc_mean(func):
 
 def phi(X, weights):
     out = 0.
-    # print X
-    #  print len(weights)
     for i, (x, wt) in enumerate(zip(X, weights)):
-        # print len(X)
         out += (wt * (x ** i))
     return out
 
@@ -37,8 +34,6 @@ def phi(X, weights):
 def squared_err(data, weights):
     err = 0.0
     for (x, y) in data:
-        # print x
-        # print y
         err += (phi(x, weights) - y) ** 2
     return err / 2.
 
