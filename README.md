@@ -9,5 +9,5 @@ ML1 Regression Assignment Code
 
 
 ## How to run the script
-type python main.py
+type **python main.py**
 
